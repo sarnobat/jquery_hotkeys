@@ -2,14 +2,16 @@
 	<head>
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script type="text/javascript">
-			$(document).ready(function () {
-				$(document).keypress(function () {
-					alert("pressed");
-				});
+			$(function() {
+			   $(window).keypress(function(e) {
+				   var key = e.which;
+				   //alert(key);
+				   $("#textbox").val(key);
+			   });
 			});
 		</script>
 	</head>
 	<body>
-		<p>Key Press Test: <input type="text" name="keypress" id="keypress" /></p>
+		<p>Key Press Test: <input type="text" name="keypress" id="textbox" /></p>
 	</body>
 </html>
