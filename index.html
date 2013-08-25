@@ -1,17 +1,15 @@
 <html>
-	<head>
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script type="text/javascript">
-			$(function() {
-			   $(window).keypress(function(e) {
-				   var key = e.which;
-				   //alert(key);
-				   $("#textbox").val(key);
-			   });
-			});
-		</script>
-	</head>
-	<body>
-		<p>Key Press Test: <input type="text" name="keypress" id="textbox" /></p>
-	</body>
+<head>
+<script type="text/javascript" src="js/kb_shortcut.packed.js" ></script>
+<script type="text/javascript">
+var kb = new kb_shortcut();
+//kb.add(["Ctrl", "Shift", "A"], function(){
+kb.add(["Shift", "A"], function(){
+    alert("Key combination activated");
+})
+</script>
+</head>
+<body>
+<h1 style='text-align: center;'>Just try pressing Ctr+Alt+A</h1>
+</body>
 </html>
